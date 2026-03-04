@@ -1,12 +1,154 @@
 /* region yoga_classes Mobile  */
+.yoga-title-up {
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  color: #0d0b0a;
+  margin-bottom: 12px;
+}
+.yoga-title {
+  font-family: 'Cabin', sans-serif;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #0d0b0a;
+  margin-bottom: 20px;
+}
+.yoga-title-descr {
+  text-align: center;
+  color: #0d0b0a;
+  margin-bottom: 48px;
+}
+.yoga-list {
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 48px;
+  margin-bottom: 48px;
+}
+.yoga-image {
+  margin-bottom: 24px;
+  width: 100%;
+}
+.yoga-item-title {
+  font-family: 'Cabin', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #0d0b0a;
+
+  margin-bottom: 20px;
+}
+.yoga-item-descr {
+  text-align: center;
+  color: #0d0b0a;
+}
+.yoga-link {
+  font-weight: 500;
+  color: #0d0b0a;
+  display: block;
+  border: 1px solid #c2d9fc;
+  background-color: #c2d9fc;
+  border-radius: 100px;
+  padding: 10px 24px;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.yoga-link:hover,
+.yoga-link:focus {
+  background-color: #c2d9fc;
+  opacity: 0.5;
+  outline: none;
+}
+.yoga-link:active {
+  background-color: transparent;
+  opacity: 1;
+}
+
 /* endregion yoga_classes Mobile  */
 
 /* region yoga_classes Tablet  */
 @media screen and (min-width: 768px) {
+  .yoga-title-up {
+    margin-bottom: 16px;
+  }
+  .yoga-title {
+    font-size: 38px;
+    margin-bottom: 24px;
+  }
+  .yoga-title-descr {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .yoga-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 27px;
+    margin-bottom: 61px;
+  }
+  .yoga-list-item {
+    flex: 0 0 calc((100% - 24px) / 2);
+  }
+
+  .yoga-list-item:nth-child(3) {
+    flex: 0 0 100%;
+  }
+  .yoga-image {
+    margin-bottom: 16px;
+  }
+
+  .yoga-item-title {
+    margin-bottom: 0;
+  }
+
+  .yoga-link {
+    margin: 0 auto;
+    width: fit-content;
+  }
 }
 /* endregion yoga_classes Tablet  */
 
 /* region yoga_classes Desktop  */
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1336px) {
+  .yoga-title {
+    font-size: 52px;
+    width: 768px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+  .yoga-item-title {
+    font-size: 36px;
+  }
+  .yoga-title-descr {
+    max-width: 768px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+  }
+  .yoga-list {
+    flex-wrap: nowrap;
+  }
+
+  .yoga-list-item {
+    flex: 0 0 calc((100% - 48px) / 3);
+  }
+  .yoga-list-item:nth-child(3) {
+    flex: 0 0 calc((100% - 48px) / 3);
+  }
+  .yoga-image {
+    margin-bottom: 32px;
+  }
+  .yoga-item-title {
+    margin-bottom: 24px;
+  }
+  .yoga-item-descr {
+    font-size: 14px;
+  }
 }
 /* endregion yoga_classes Desktop  */

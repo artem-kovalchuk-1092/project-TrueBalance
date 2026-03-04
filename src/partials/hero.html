@@ -1,1 +1,51 @@
-<section class="hero"></section>
+<section class="hero-section" id="hero">
+  <picture class="hero-picture">
+    <source
+      media="(min-width: 1336px)"
+      srcset="
+        /img/webp/hero-img/Yoga_sunset-d.webp    1x,
+        /img/webp/hero-img/Yoga_sunset-d@2x.webp 2x
+      "
+      width="1440"
+      height="684"
+    />
+    <source
+      media="(min-width: 768px)"
+      srcset="
+        /img/webp/hero-img/Yoga_sunset-t.webp    1x,
+        /img/webp/hero-img/Yoga_sunset-t@2x.webp 2x
+      "
+      width="768"
+      height="359"
+    />
+    <img
+      fetchpriority="high"
+      class="hero-img"
+      src="/img/webp/hero-img/Yoga_sunset-m.webp"
+      srcset="
+        /img/webp/hero-img/Yoga_sunset-m.webp    1x,
+        /img/webp/hero-img/Yoga_sunset-m@2x.webp 2x
+      "
+      width="375"
+      height="301"
+      alt="Yoga sunset"
+    />
+  </picture>
+  <div class="container hero-container">
+    <h1 class="hero-title">Transform Your Life with Our Yoga Classes</h1>
+    <div class="hero-content">
+      <p class="hero-description">
+        Discover the harmony of mind and body through our expertly designed yoga
+        programs. Join a community dedicated to wellness and personal growth.
+      </p>
+      <ul class="hero-btn-list">
+        <li class="hero-btn-item">
+          <a class="hero-btn-join" href="#pricing">Join Now</a>
+        </li>
+        <li class="hero-btn-item">
+          <a class="hero-btn-learn" href="#gallery">Learn More</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

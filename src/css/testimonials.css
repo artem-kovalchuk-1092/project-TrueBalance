@@ -1,12 +1,126 @@
-/* region testimonials Mobile  */
-/* endregion testimonials Mobile  */
+.testimonials {
+  background-color: #f2fafa;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
 
-/* region testimonials Tablet  */
 @media screen and (min-width: 768px) {
+  .testimonials {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
-/* endregion testimonials Tablet  */
 
-/* region testimonials Desktop  */
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1336px) {
+  .testimonials {
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
 }
-/* endregion testimonials Desktop  */
+
+.testimonials__title {
+  font-family: 'Cabin', sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .testimonials__title {
+    font-size: 40px;
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (min-width: 1336px) {
+  .testimonials__title {
+    font-size: 52px;
+  }
+}
+
+.testimonials__descr {
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.testimonials__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (min-width: 1336px) {
+  .testimonials__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 24px;
+  }
+}
+
+.testimonials__item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  padding: 12px;
+  width: 100%;
+  height: auto;
+  background: #dfebeb;
+}
+
+@media screen and (min-width: 1336px) {
+  .testimonials__item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+
+.testimonials__text {
+  flex-grow: 1;
+  margin-top: 0;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.testimonials__author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.client__photo {
+  border-radius: 50%;
+  margin-bottom: 16px;
+  transition:
+    transform 250ms ease-in-out,
+    box-shadow 250ms ease-in-out;
+}
+
+.client__name {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.testimonials__item:hover .client__photo {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.client__position {
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 1336px) {
+  .client__position {
+    line-height: 1.6;
+  }
+}

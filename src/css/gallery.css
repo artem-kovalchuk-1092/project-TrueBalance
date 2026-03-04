@@ -1,12 +1,137 @@
 /* region gallery Mobile  */
+.container-gallery {
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.gallery {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.gallery-titel {
+  font-family: 'Cabin', sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: #0d0b0a;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.gallery-description {
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+  color: #0d0b0a;
+  max-width: 100%;
+  margin-bottom: 48px;
+}
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.gallery-item {
+  flex-basis: calc((100% - 24px) / 2);
+}
+
+.gallery-img {
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0.3s ease-in-out;
+}
+
+.gallery-list:hover .gallery-img {
+  transform: scale(0.95);
+  opacity: 0.6;
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+/* .gallery-item {
+  position: relative;
+}
+
+.gallery-item::before {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border: 2px solid white;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease-in-out,
+    inset 0.3s ease-in-out;
+}
+
+.gallery-item:hover::before {
+  opacity: 1;
+  inset: 20px;
+} */
+
+@media screen and (min-width: 375px) {
+  .container-gallery {
+    max-width: 375px;
+  }
+}
+
 /* endregion gallery Mobile  */
 
 /* region gallery Tablet  */
 @media screen and (min-width: 768px) {
+  .gallery {
+    background-color: #dfebeb;
+    padding-top: 64px;
+  }
+
+  .container-gallery {
+    max-width: 768px;
+  }
+
+  .gallery-titel {
+    margin-bottom: 24px;
+  }
+
+  .gallery-description {
+    margin-bottom: 80px;
+  }
 }
 /* endregion gallery Tablet  */
 
 /* region gallery Desktop  */
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1336px) {
+  .gallery {
+    background-color: #f2fafa;
+    padding-top: 112px;
+    padding-bottom: 112px;
+  }
+
+  .container-gallery {
+    max-width: 1440px;
+    padding: 0 64px;
+  }
+
+  .gallery-titel {
+    font-size: 52px;
+  }
+
+  .gallery-description {
+    font-weight: 500;
+  }
+
+  .gallery-item {
+    flex-basis: calc((100% - 48px) / 3);
+  }
 }
+
 /* endregion gallery Desktop  */

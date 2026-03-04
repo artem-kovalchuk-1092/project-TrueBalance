@@ -1,12 +1,138 @@
 /* region header Mobile  */
+/* ===== Header ===== */
+.header-nav {
+  display: none;
+}
+
+.main-header {
+  padding: 10px 0;
+}
+
+.container-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.burger-menu {
+  width: 44px;
+  height: 44px;
+  margin-right: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.burger-icon {
+  fill: currentColor;
+}
+
+.yb-brand {
+  margin-right: 16px;
+}
+
+.yb-brand-logo {
+  width: 84px;
+  height: 36px;
+  display: block;
+  fill: currentColor;
+}
+
+.yb-join {
+  min-width: 102px;
+  height: 34px;
+  padding: 4px 20px;
+
+  border: 1px solid #c2d9fc;
+  background-color: #c2d9fc;
+  border-radius: 100px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: currentColor;
+  transition: background-color 250ms ease-in-out, opacity 250ms ease-in-out;
+}
+
+.yb-join:hover,
+.yb-join:focus {
+  opacity: 0.5;
+  outline: none;
+}
+.yb-join:active {
+  background-color: transparent;
+  opacity: 1;
+}
+
 /* endregion header Mobile  */
 
 /* region header Tablet  */
 @media screen and (min-width: 768px) {
+  .main-header {
+    padding: 15px 0;
+  }
+  .container-header {
+    justify-content: space-between;
+    position: relative;
+  }
+  .burger-menu {
+    width: 24px;
+    height: 24px;
+  }
+  .yb-brand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .yb-join {
+    padding: 8px 20px;
+    min-width: 105px;
+    height: 42px;
+  }
 }
 /* endregion header Tablet  */
 
 /* region header Desktop  */
-@media screen and (min-width: 1366px) {
+@media screen and (min-width: 1336px) {
+  .main-header {
+    padding: 15px 0;
+  }
+  .burger-menu {
+    display: none;
+  }
+  .header-nav {
+    display: block;
+  }
+  .header-list {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+  .header-link {
+    position: relative;
+  }
+  .header-link:hover {
+    opacity: 0.5;
+  }
+  .header-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: rgba(13, 11, 10, 0.5);
+    transition: width 250ms ease-in-out;
+  }
+  .header-link:hover::after,
+  .header-link:focus::after {
+    width: 100%;
+  }
 }
 /* endregion header Desktop  */
